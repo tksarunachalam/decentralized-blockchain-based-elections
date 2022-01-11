@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Webpage !</title>
+    <link rel="stylesheet" href=" {{ url_for('static',filename = 'login_style.css') }} " />
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img">
+        <img src="{{ url_for('static',filename = 'vote.webp') }} " />
+      </div>
+      <div class="login-container">
+        <form method ="POST">
+          <img class="avator" src="{{ url_for('static',filename = 'india flag.jpg') }} "/>
+          <h3>Your duty, To a better tomorrow</h3>
+          <div class="input-div" one>
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div>
+              <h5>Voter Id</h5>
+              <input class="input" type="text" name="voter_id" />
+            </div>
+          </div>
+
+          <div class="input-div" two>
+            <div class="i">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+              <h5>Email</h5>
+              <input class="input" type="email" name="email"/>
+            </div>
+          </div>
+
+
+          <div class="input-div" two>
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div>
+              <h5>password</h5>
+              <input class="input" type="password" name="password" />
+            </div>
+          </div>
+
+          
+          <!-- <a href="#">Forgot password ?</a> -->
+          <input type="submit" class="btn" value="Login" />
+        </form>
+      </div>
+    </div>
+    <footer>
+      
+    </footer>
+    <script type="text/javascript" src="{{ url_for('static', filename = 'main.js') }} "></script>
+  </body>
+</html>

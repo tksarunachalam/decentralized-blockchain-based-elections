@@ -1,0 +1,12 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+  <br><br>
+  <h1>Admin Page</h1>
+  <h2> Elections 2021 CEO </h2>
+
+  <h3>Time: {{current_time}}</h3>
+  <h2> Polled percentage  {{percentage}} %</h2>
+
+  <a href="{{ url_for('home') }}" class="btn btn-primary" method="POST">Login </a>
+{% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="container-fluid vh-100 h-100 bg" >
+            
+        <div class="container-fluid h-10" style="color:azure; font-size:2vw;background-color: 	#d4af37;">
+            <div class="row">
+                <div class="col-8">
+                    Please Cast your Vote
+                </div>
+                <div class="col-4 align-content-center">
+                    <div class="btn-group" style="float:right;margin-top: 3%;margin-right: 4%;">
+                        <button type="submit" class="btn btn-primary order-first" style="margin-top: 2%;" onclick="vote()">Vote</button>
+                        <button type="submit" class="btn btn-primary order-last" style="float: right;margin-top: 2%;margin-left: 10%;" onclick="logout()">Logout</button>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        
+        <div class="container-fluid h-90">
+        <div class="row h-100 justify-content-center align-content-center" style="background-color:black">
+            <div class="col-8" style="background-color: black;color:white;text-align: center;font-size: x-large" >
+            Enter address to delegate
+            <form  method="POST" style="margin-top:2%;">
+                <input type="text" name="address" class="w-50"><br>
+                <button type="submit" class="btn btn-primary" style="margin-top : 1%" onclick="">Delegate</button>
+            </form>
+            </div>
+        </div>
+        </div>
+    
+    </div>
+
+    <script src="bootstrap-5.0.0-beta3-dist/js/bootstrap.min.js"></script>
+
+    <script>
+        function voteDelegate() {
+            if (confirm("Are you sure to delegate to the address?")) {
+                //blockchain part
+                //log user out
+            } else {
+                //route to same page
+            }
+        }
+
+        function logout(){
+            if(confirm("Are you sure,you want to logout?")){
+                //same page
+                window.location.replace("{{ url_for('logout') }} ");
+            }
+            else{
+                //same page
+            }
+        }
+
+        function vote(){
+            if(confirm("Are you sure,you want to cancel delegation?")){
+                //same page
+            }
+            else{
+                //same page
+            }
+        }
+    </script>
+{% endblock content %}
